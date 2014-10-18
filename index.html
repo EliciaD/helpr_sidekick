@@ -39,43 +39,43 @@
 
         <p class = "phone">
           <label>Phone Number</label>
-          <input type="tel" name="usrtel">
+          <input type="tel" name="usrtel" id="phoneNum">
         </p>
 
         <p class = "email">
           <label>Email</label>
-          <input type="email" placeholder = "example@gmail.com" name="email">
+          <input type="email" placeholder = "example@gmail.com" id="email" name="email">
         </p>
     
 
       <p class="date">
         <label>Date</label>
-        <input id="datepicker" >
+        <input id="datepicker">
       </p>
 
       <p class = "startTime">
         <label>Start Time</label>
-        <input type="time" name="start_time">
+        <input name="start_time" id="startTime">
       </p>
 
       <p class="numofHours">
         <label>Number of hours</label>
-        <input type="number" name="hours">
+        <input type="number" name="hours" id="numHours">
       </p>
    
       </p>
 
       <p class = "address">
         <label>Address</label>
-         <input type="address" name="address">
+         <input type="address" name="address" id="address">
       </p>
       
         <p class="notes">
           <label>Notes</label>
-          <textarea name="text"></textarea> 
+          <textarea name="text" id="notes"></textarea> 
         </p>
      
-         <input type="button" onclick="submitFunction()" value="Submit form">
+         <input type="button" onclick="collectData()" value="Submit form">
   
    </form>
 
