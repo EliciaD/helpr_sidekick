@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>My Parse App</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  
+ 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+ 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+ 
+</head>
+
+<body>
+  
+  <div id="main">
+    <h1>Welcome to Helpr!</h1>
+
+    <p>Need a volunteer to help you out in the community? Fill out the form below. </p>
+    
+    <form id="volunteerForm">
+     
+
+        <p class = "name">
+          <label>Your Name or Organization</label>
+          <input type="name" placeholder = "Midland Health Clinic" id = "yourName" name = "name">
+        </p>
+
+        <p class = "phone">
+          <label>Phone Number</label>
+          <input type="tel" name="usrtel">
+        </p>
+
+        <p class = "email">
+          <label>Email</label>
+          <input type="email" placeholder = "example@gmail.com" name="email">
+        </p>
+    
+
+      <p class="date">
+        <label>Date</label>
+        <input id="datepicker" >
+      </p>
+
+      <p class = "startTime">
+        <label>Start Time</label>
+        <input type="time" name="start_time">
+      </p>
+
+      <p class="numofHours">
+        <label>Number of hours</label>
+        <input type="number" name="hours">
+      </p>
+   
+      </p>
+
+      <p class = "address">
+        <label>Address</label>
+         <input type="address" name="address">
+      </p>
+      
+        <p class="notes">
+          <label>Notes</label>
+          <textarea name="text"></textarea> 
+        </p>
+     
+         <input type="button" onclick="submitFunction()" value="Submit form">
+  
+   </form>
+
+
+  </div>
+
+ 
+</body>
+
+</html>
