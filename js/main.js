@@ -1,7 +1,7 @@
 // initializing parse
 Parse.initialize("SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG", "eFXFwBaNSKPgMLJHb4yi16YU4oojFURbyFgPAv13");
-  
-  //BUGGY, Commented out.
+
+// Date Picker
   $(document).ready(function() {
      $("#datepicker").datepicker();
   });
@@ -27,11 +27,12 @@ Parse.initialize("SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG", "eFXFwBaNSKPgMLJHb4
 function submitFunction (name, phone, email, date, start, hours, address, notes) {
  
   console.log("worked");
-  var tasks = Parse.Object.extend("tasks");
-  var tasks = new tasks();
+  var jobs = Parse.Object.extend("Jobs");
+  var jobs = new jobs();
  
+ validation();
  
-  tasks.save({
+  jobs.save({
   // these need to change to variables
     name: name,
     phoneNumber: Number(phone),
@@ -52,3 +53,16 @@ function submitFunction (name, phone, email, date, start, hours, address, notes)
     }
   });
 }
+
+function validation (){
+if ("" == document.forms.yourName.value) {
+
+  alert(NOPE NONE SHALL PASS);
+
+} else {
+console.log("w/e");
+}
+
+
+}
+
