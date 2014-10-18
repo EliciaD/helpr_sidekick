@@ -1,7 +1,7 @@
 // initializing parse
 Parse.initialize("SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG", "eFXFwBaNSKPgMLJHb4yi16YU4oojFURbyFgPAv13");
-
-// Date Picker
+  
+  //BUGGY, Commented out.
   $(document).ready(function() {
      $("#datepicker").datepicker();
   });
@@ -11,26 +11,26 @@ Parse.initialize("SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG", "eFXFwBaNSKPgMLJHb4
     var jobsName = document.getElementById("yourName").value;
     var jobsPhoneNum = document.getElementById("phoneNum").value;
     var jobsEmail = document.getElementById("email").value;
+    var jobsTitle = document.getElementById("jobTitle").value;
     var jobsDate = document.getElementById("datepicker").value;
     var jobsStart = document.getElementById("startTime").value;
     var jobsNumHours = document.getElementById("numHours").value;
     var jobsAddress = document.getElementById("address").value;
     var jobsNotes = document.getElementById("notes").value;
 
-    submitFunction(jobsName, jobsPhoneNum, jobsEmail, jobsDate,jobsStart, jobsNumHours, jobsAddress, jobsNotes);
+    submitFunction(jobsName, jobsPhoneNum, jobsEmail, jobsTitle, jobsDate, jobsStart, jobsNumHours, jobsAddress, jobsNotes);
    }
 
 
 
 
 // Function called to save all the information gathered.
-function submitFunction (name, phone, email, date, start, hours, address, notes) {
+function submitFunction (name, phone, email, title, date, start, hours, address, notes) {
  
   console.log("worked");
   var jobs = Parse.Object.extend("Jobs");
   var jobs = new jobs();
  
- validation();
  
   jobs.save({
   // these need to change to variables
@@ -38,6 +38,7 @@ function submitFunction (name, phone, email, date, start, hours, address, notes)
     phoneNumber: Number(phone),
     email: email,
     date: date,
+    title:title,
     startTime: start,
     numofHours: Number(hours),
     address: address,
@@ -53,16 +54,3 @@ function submitFunction (name, phone, email, date, start, hours, address, notes)
     }
   });
 }
-
-function validation (){
-if ("" == document.forms.yourName.value) {
-
-  alert(NOPE NONE SHALL PASS);
-
-} else {
-console.log("w/e");
-}
-
-
-}
-

@@ -23,12 +23,10 @@
 </head>
 
 <body>
-  <header> 
+   <header> 
     <img src = "images/helpr_logo.png" alt = "helpr">
   </header>
-  
   <div id="main">
-
     <h1>Welcome to Helpr!</h1>
 
     <p>Need a volunteer to help you out in the community? Fill out the form below. </p>
@@ -40,12 +38,12 @@
        <label class="category">Contact Information:</label>
        <p class = "name">
           <label>Your Name or Organization</label>
-          <input type="name" id = "yourName" name = "name" >
+          <input type="name" id = "yourName" name = "name">
         </p>
 
         <p class = "phone">
           <label>Phone Number</label>
-          <input type="tel" name="usrtel" id="phoneNum" >
+          <input type="tel" name="usrtel" id="phoneNum">
         </p>
 
         <p class = "email">
@@ -56,6 +54,11 @@
 
      <fieldset>
      <label class="category">Job Details:</label>
+     <p class="jobTitle">
+        <label>Job Title</label>
+        <input id="jobTitle">
+      </p>
+     
       <p class="date">
         <label>Date</label>
         <input id="datepicker">
@@ -83,7 +86,7 @@
           <textarea name="text" id="notes"></textarea> 
         </p>
      
-         <input type="button" id="submitbtn" onclick="collectData()" value="Submit form">
+         <input type="button" id = "submitbtn" onclick="collectData()" value="Submit form">
   </fieldset>
    </form>
 
