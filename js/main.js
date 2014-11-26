@@ -27,28 +27,30 @@ Parse.initialize("SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG", "eFXFwBaNSKPgMLJHb4
 // Function called to save all the information gathered.
 function submitFunction (name, phone, email, title, date, start, hours, address, notes) {
  
-  console.log("worked");
   var jobs = Parse.Object.extend("Jobs");
   var jobs = new jobs();
  
  
   jobs.save({
   // these need to change to variables
-    name: name,
-    phoneNumber: Number(phone),
-    email: email,
-    date: date,
-    title:title,
-    startTime: start,
-    numofHours: Number(hours),
-    address: address,
-    notes: notes 
+    employerName: String(name),
+    phoneNumber: String(phone),
+    email: String(email),
+    date: String(date),
+    title:String(title),
+    startTime: String(start),
+    numofHours: String(hours),
+    address: String(address),
+    notes: String(notes) 
     
   }, {
     success: function(name) {
       // The object was saved successfully.
     },
-    error: function(name, error) {
+    error: function(model, error) {
+
+      console.log("there error codde "+ error.code);
+      console.log("there model  "+ model);
       // The save failed.
       // error is a Parse.Error with an error code and message.
     }
