@@ -47,11 +47,15 @@ fieldset {
     margin-bottom: 20px;
     border-radius: 8px;
 }
+input:invalid {
+    background-color: #ecf0f1;
+}
 input, textarea{
     border:1px solid #ccc;
     border-radius:5px;
     float:right;
     width:45%;
+    height: 29px;
    margin-right:40px;
     }
 
@@ -68,8 +72,9 @@ img{
     padding:10px;
     width:30%;
     height: 44px;
-    color:grey;
+    color:white;
     border:0px;
+    background-color: #34495e;
     margin-top: 20px;
 }
 #submitbtn:hover{

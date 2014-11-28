@@ -38,17 +38,17 @@
        <label class="category">Contact Information:</label>
        <p class = "name">
           <label>Your Name or Organization</label>
-          <input type="name" id = "yourName" name = "name">
+          <input type="name" id = "yourName" name = "name" required>
         </p>
 
         <p class = "phone">
           <label>Phone Number</label>
-          <input type="tel" name="usrtel" id="phoneNum">
+          <input type="tel" name="usrtel" id="phoneNum" required>
         </p>
 
         <p class = "email">
           <label>Email</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="email" required>
         </p>
       </fieldset>
 
@@ -56,29 +56,29 @@
      <label class="category">Job Details:</label>
      <p class="jobTitle">
         <label>Job Title</label>
-        <input id="jobTitle">
+        <input id="jobTitle" required>
       </p>
      
       <p class="date">
         <label>Date</label>
-        <input id="datepicker">
+        <input id="datepicker" required>
       </p>
 
       <p class = "startTime">
         <label>Start Time</label>
-        <input name="start_time" id="startTime">
+        <input name="start_time" id="startTime" required>
       </p>
 
       <p class="numofHours">
         <label>Number of hours</label>
-        <input type="number" name="hours" id="numHours">
+        <input type="number" name="hours" id="numHours" required>
       </p>
    
       </p>
 
       <p class = "address">
         <label>Address</label>
-         <input type="address" name="address" id="address">
+         <input type="address" name="address" id="address" required>
       </p>
       
         <p class="notes">
@@ -86,7 +86,7 @@
           <textarea name="text" id="notes"></textarea> 
         </p>
      
-         <input type="button" id = "submitbtn" onclick="collectData()" value="Submit form">
+         <input type="button" id = "submitbtn" onclick="collectData() validateForm()" value="Submit form">
   </fieldset>
    </form>
 

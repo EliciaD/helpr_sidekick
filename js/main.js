@@ -30,7 +30,51 @@ function submitFunction (name, phone, email, title, date, start, hours, address,
  
   var jobs = Parse.Object.extend("Jobs");
   var jobs = new jobs();
- 
+
+    // Validate name & organization
+      var title = $("#yourName").val();
+    if (title=="" || title==null) { } else {
+    }
+
+    // validate phone number
+    
+
+    // Validate Email
+    var email = $("#email").val();
+    if ((/(.+)@(.+){2,}\.(.+){2,}/.test(email)) || email=="" || email==null) { } else {
+    }
+
+    // Job Title
+    var title = $("#jobTitle").val();
+    if (title=="" || title==null) { } else { 
+    }
+
+    // Date Picker
+    var title = $("#datepicker").val();
+    if (title=="" || title==null) { } else { 
+    }
+
+    // Start Time
+    var title = $("#startTime").val();
+    if (title=="" || title==null) { } else { 
+    }
+
+    // Number of Hours
+    var title = $("#numHours").val();
+    if (title=="" || title==null) { } else { 
+    }  
+
+    // Address
+    var title = $("#address").val();
+    if (title=="" || title==null) { } else {
+    }
+
+     // Notes
+    var title = $("#notes").val();
+    if (title=="" || title==null) { } else {
+       
+    }    
+
  
   jobs.save({
   // these need to change to variables
@@ -48,6 +92,7 @@ function submitFunction (name, phone, email, title, date, start, hours, address,
     success: function(name) {
       // The object was saved successfully.
        location.reload();
+
 
     },
     error: function(model, error) {
