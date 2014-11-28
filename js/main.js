@@ -19,6 +19,7 @@ Parse.initialize("SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG", "eFXFwBaNSKPgMLJHb4
     var jobsNotes = document.getElementById("notes").value;
 
     submitFunction(jobsName, jobsPhoneNum, jobsEmail, jobsTitle, jobsDate, jobsStart, jobsNumHours, jobsAddress, jobsNotes);
+   
    }
 
 
@@ -46,6 +47,8 @@ function submitFunction (name, phone, email, title, date, start, hours, address,
   }, {
     success: function(name) {
       // The object was saved successfully.
+       location.reload();
+
     },
     error: function(model, error) {
 
